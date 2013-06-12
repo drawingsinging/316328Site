@@ -1,10 +1,73 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper,twocolumn]{article}
 \usepackage{ctex}
 
 \begin{document}
-\title{站点需求分析报告}
+\title{站点需求分析报告(草稿)\footnote{若需更正，请于316328群中讨论，
+    联系作者进行更正}}
 \author{Budlion Liu\\lliudongqi@gmail.com}
 \maketitle
-\section{引言}
-Hello world
+\section{开发环境}
+本站点经商量，开发环境主要如下:
+\begin{itemize}
+\item 开发语言:Python
+\item 开发框架:Django
+\item 浏览器支持:IE 9,10,chrome 26+,Firefox 21+
+\item 开发IDE:emacs,sublime
+\item 版本控制:git,采用github协助式开发\footnote{暂使用https://github.com/Budlion/316328Site}
+\item 服务器：采用阿里的云服务
+\item 代码编码：utf8
+\end{itemize}
+其主要参与人员，与其主要负责模块如下\footnote{若有其他参与者，或者想负责
+  模块请告知，原则是谁有时间，谁参与}:
+\begin{itemize}
+\item 项目代码管理:脑大
+\item 文档管理(主要是文档的组织管理):脑大
+\item 系统架构：大三哥
+\item 前台设计；阿里琪
+\item 前台美工: 阿里琪
+\item 小码农：脑大，大三哥，老四哥，阿里琪
+\end{itemize}
+\section{功能分析}
+本站点的定义是小众的SNS网站，主要目的是方便SDU计系09级2班的同学们，能
+让遍布全国各地的同学持续性获取班级同学的信息，方便同学交流。因此此网站
+的受众人群规模较小,不需要过多考虑性能问题。其主要功能如下\footnote{对
+  于功能，若有不妥之处，或者需要变更，增添，删除。请首先于316328群中集
+  体讨论，然后自行修改或者通知脑大进行修改。}:
+\begin{itemize}
+\item 用户权限管理
+\item 通信信息管理
+\item 活动信息管理
+\item 相册信息管理
+\item 视频信息管理
+\item 公告信息管理
+\end{itemize}
+\subsection{用户信息管理}
+用户可通过于SDU求学时的学号进行登录，系统会提供初始化密码，不提供注册
+功能(是否合理?)。提供密码修正，权限更改，其中站点会提供管理员与普通成
+员两种权限。其变更整合在通信信息管理模块。
+\subsection{通讯信息管理}
+此模块是此站点主要功能模块之一。采用名片夹的形式。\\
+名片夹中会提供如下的基本信息:
+\begin{itemize}
+\item 姓名，性别，学号,两寸免冠照片\footnote{此数据要不要使用山大校园
+    卡信息管理系统中的照片呢}等私密信息
+\item 生活足迹队列(主要是所在城市)
+\item 电话号码,QQ,EMail,MSN,微博，站点等社交信息
+\item 详细地址
+\end{itemize}
+这些基本信息会在网站中以名片夹列表的形式出现，同时也能够生成相应格式的
+通信录(csv)文件，能方便大家导入到自己的手机系统中，同时此类信息若有变
+更，应可在网站中公告版模块进行公告
+\subsection{活动信息管理}
+发布活动：集体活动，会告知所有用户，或者部分指定用户；出差，通知所在城
+市用户。\\
+此通知模式可能是站内信，邮件，短信。\\
+活动浏览
+\subsection{相册信息管理}
+关联活动，用户，其他大家都知道，不废话
+\subsection{视频信息管理}
+可选。同上。
+同时，考虑毕业最后一次聚餐所收集的10年视频的存储，发布形式。
+\subsection{公告信息管理}
+个人感觉比较重要的一个module,实时显示站内更新通知。
 \end{document}
